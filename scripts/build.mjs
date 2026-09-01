@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
 import { copyFile, readFile } from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
 
 const root = new URL('../', import.meta.url)
 const source = new URL('ndarray-ops.js', root)
@@ -8,7 +9,7 @@ const browser = new URL('browser.js', root)
 
 await copyFile(source, browser)
 for (const entry of [source, browser, new URL('index.mjs', root)]) {
-  execFileSync(process.execPath, ['--check', entry.pathname], { stdio: 'inherit' })
+  execFileSync(process.execPath, ['--check', fileURLToPath(entry)], { stdio: 'inherit' })
 }
 assert.equal(await readFile(browser, 'utf8'), await readFile(source, 'utf8'))
 
