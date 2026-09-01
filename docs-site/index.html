@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@stackline/ndarray-ops | Alexandro.Net</title>
+  <meta name="description" content="A CSP-safe, dependency-free compatibility continuation of ndarray-ops with 150 operations, CJS, ESM, browser, and TypeScript support.">
+  <meta name="theme-color" content="#07111f">
+  <link rel="canonical" href="https://alexandro.net/docs/vanilla/ndarray-ops/">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"@stackline/ndarray-ops","version":"1.0.0","description":"CSP-safe, dependency-free compatibility continuation of ndarray-ops with 150 operations.","codeRepository":"https://github.com/alexandroit/stackline-ndarray-ops","license":"https://opensource.org/license/mit","programmingLanguage":["JavaScript","TypeScript"],"runtimePlatform":"Node.js >=18; modern browsers","url":"https://alexandro.net/docs/vanilla/ndarray-ops/"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to package documentation</a>
+  <header class="site-header">
+    <a class="wordmark" href="https://alexandro.net/" aria-label="Alexandro.Net home">Alexandro.Net</a>
+    <nav class="top-nav" aria-label="Page navigation">
+      <a href="#install">Install</a>
+      <a href="#contract">Contract</a>
+      <a href="#api">API</a>
+      <a href="#migration">Migration</a>
+    </nav>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <section class="hero-grid" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Maintained npm package</p>
+        <h1 id="page-title">@stackline/<span>ndarray-ops</span></h1>
+        <p class="lede">The complete historical ndarray operation surface, implemented without runtime string compilation or production dependencies.</p>
+        <div class="actions">
+          <a class="button primary" href="https://www.npmjs.com/package/@stackline/ndarray-ops">View on npm</a>
+          <a class="button" href="https://github.com/alexandroit/stackline-ndarray-ops">Browse source</a>
+        </div>
+      </div>
+      <aside class="package-facts" aria-label="Package facts">
+        <dl>
+          <div><dt>Version</dt><dd>1.0.0</dd></div>
+          <div><dt>Runtime</dt><dd>Node.js ≥18</dd></div>
+          <div><dt>Formats</dt><dd>CJS · ESM · browser</dd></div>
+          <div><dt>Types</dt><dd>TypeScript 3.9+</dd></div>
+          <div><dt>Production graph</dt><dd>1 node · 0 dependencies</dd></div>
+          <div><dt>License</dt><dd>MIT</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section id="install" class="section" aria-labelledby="install-title">
+      <div class="section-heading">
+        <p class="eyebrow">Start here</p>
+        <h2 id="install-title">Install the scoped package</h2>
+      </div>
+      <div class="code-card">
+        <button type="button" data-copy-target="install-command" aria-label="Copy install command">Copy</button>
+        <pre id="install-command"><code>npm install @stackline/ndarray-ops@1.0.0</code></pre>
+      </div>
+      <p>CommonJS, the historical deep entry, ESM default and named exports, AMD, and the classic <code>globalThis.ndarrayOps</code> browser surface are included.</p>
+      <div class="code-grid">
+        <article>
+          <h3>CommonJS</h3>
+          <pre><code>const ops = require('@stackline/ndarray-ops')
+ops.assign(destination, source)</code></pre>
+        </article>
+        <article>
+          <h3>ES modules</h3>
+          <pre><code>import ops, { add, sum } from '@stackline/ndarray-ops'
+add(out, left, right)</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section id="contract" class="section" aria-labelledby="contract-title">
+      <div class="section-heading">
+        <p class="eyebrow">Compatibility</p>
+        <h2 id="contract-title">Static implementation, historical behavior</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>150 operations</h3>
+          <p>Export names, insertion order, arities, function names, mutation, return values, scalar and reversed-operand families match <code>ndarray-ops@1.2.2</code>.</p>
+        </article>
+        <article>
+          <h3>Layout fidelity</h3>
+          <p>Arbitrary rank, offsets, positive, negative and zero strides, mixed orders with 64-cell reverse blocking, rank-zero views, empty arrays, aliases, and generic storage preserve observable traversal.</p>
+        </article>
+        <article>
+          <h3>Strict CSP</h3>
+          <p>No <code>eval</code> or <code>new Function</code> is used. Loading and execution work when string code generation is prohibited.</p>
+        </article>
+        <article>
+          <h3>Malformed-input hardening</h3>
+          <p>Non-finite or out-of-range metadata and invalid order permutations fail synchronously instead of compiling invalid code, wrapping addresses, or hanging.</p>
+        </article>
+      </div>
+      <p class="callout">Valid metadata uses non-negative signed-32-bit integer shape extents, signed-32-bit integer strides and offsets, a complete order permutation, a string dtype, and compatible storage. NaN and Infinity remain valid data values.</p>
+    </section>
+
+    <section id="api" class="section" aria-labelledby="api-title">
+      <div class="section-heading">
+        <p class="eyebrow">Operation inventory</p>
+        <h2 id="api-title">The complete fixed API</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Public operation families and examples</caption>
+          <thead><tr><th scope="col">Family</th><th scope="col">Operations</th><th scope="col">Variants</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Arithmetic</th><td><code>add sub mul div mod</code></td><td><code>eq</code>, <code>s</code>, <code>seq</code></td></tr>
+            <tr><th scope="row">Bitwise</th><td><code>band bor bxor lshift rshift rrshift</code></td><td><code>eq</code>, <code>s</code>, <code>seq</code></td></tr>
+            <tr><th scope="row">Logic and comparison</th><td><code>and or eq neq lt gt leq geq</code></td><td>array, scalar and in-place</td></tr>
+            <tr><th scope="row">Math</th><td><code>abs acos asin atan ceil cos exp floor log round sin sqrt tan max min atan2 pow</code></td><td>array, scalar, in-place and reversed forms</td></tr>
+            <tr><th scope="row">Reduction</th><td><code>any all sum prod norm2squared norm2 norminf norm1 sup inf</code></td><td>scalar result</td></tr>
+            <tr><th scope="row">Utility</th><td><code>argmin argmax random assign assigns equals</code></td><td>indices, mutation or comparison</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="code-card">
+        <button type="button" data-copy-target="example-code" aria-label="Copy ndarray example">Copy</button>
+        <pre id="example-code"><code>import ndarray from 'ndarray'
+import { add, sum } from '@stackline/ndarray-ops'
+
+const left = ndarray(new Float64Array([1, 2, 3, 4]), [2, 2])
+const right = ndarray(new Float64Array([4, 3, 2, 1]), [2, 2])
+const out = ndarray(new Float64Array(4), [2, 2])
+
+add(out, left, right)
+console.log(sum(out)) // 20</code></pre>
+      </div>
+    </section>
+
+    <section id="migration" class="section" aria-labelledby="migration-title">
+      <div class="section-heading">
+        <p class="eyebrow">Adoption</p>
+        <h2 id="migration-title">Keep the historical import key</h2>
+      </div>
+      <p>An exact npm alias lets existing <code>require('ndarray-ops')</code>, <code>import ... from 'ndarray-ops'</code>, and deep-entry imports remain unchanged.</p>
+      <div class="code-card">
+        <button type="button" data-copy-target="alias-code" aria-label="Copy npm alias">Copy</button>
+        <pre id="alias-code"><code>{
+  "dependencies": {
+    "ndarray-ops": "npm:@stackline/ndarray-ops@1.0.0"
+  }
+}</code></pre>
+      </div>
+      <p>Run the downstream's own install, test, type, lint, build and layout-specific smoke gates. Invalid view metadata is the intentional compatibility boundary; valid operation behavior remains the migration contract.</p>
+    </section>
+
+    <section class="section evidence" aria-labelledby="evidence-title">
+      <div class="section-heading">
+        <p class="eyebrow">Release evidence</p>
+        <h2 id="evidence-title">What the package gate covers</h2>
+      </div>
+      <ul class="check-list">
+        <li>All 150 API entries and every deterministic operation across layouts.</li>
+        <li>Shared-buffer overlap, generic get/set order, block boundaries and rank 10,000.</li>
+        <li>Strict CSP, CommonJS, ESM, browser, npm alias and TypeScript 3.9/current consumers.</li>
+        <li>Warm rank-1, rank-2 and rank-3 performance relative to the exact upstream artifact.</li>
+        <li>One-node production closure, licenses, CycloneDX SBOM, package lint and registry audits.</li>
+      </ul>
+      <p><a href="VERIFICATION.md">Verification guide</a> · <a href="COMPATIBILITY_CONTRACT.md">Full compatibility contract</a> · <a href="MIGRATION.md">Migration guide</a> · <a href="SECURITY.md">Security policy</a></p>
+    </section>
+
+    <section class="section attribution" aria-labelledby="attribution-title">
+      <h2 id="attribution-title">Independent maintenance and attribution</h2>
+      <p>This package is independently maintained and is not affiliated with or endorsed by Mikola Lysenko, the scijs organization, or DefinitelyTyped. The original runtime and declaration attribution is preserved under the MIT license.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="https://alexandro.net/">Alexandro.Net</a>
+    <p>Open source package documentation. <a href="https://alexandro.net/">Return to the package registry</a>.</p>
+    <p class="copy-status" aria-live="polite"></p>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

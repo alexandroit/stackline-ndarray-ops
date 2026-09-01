@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /docs/vanilla/ndarray-ops/
+
+Sitemap: https://alexandro.net/docs/vanilla/ndarray-ops/sitemap.xml

@@ -1,0 +1,10 @@
+@stackline/ndarray-ops is an independently maintained continuation of
+ndarray-ops@1.2.2. It is not affiliated with or endorsed by Mikola Lysenko,
+the scijs organization, or DefinitelyTyped.
+
+The runtime API and behavior are derived from ndarray-ops, Copyright (c) 2013
+Mikola Lysenko, under the MIT License.
+
+The first-party declaration surface was adapted from the MIT-licensed
+DefinitelyTyped ndarray-ops definitions and corrected to match observed
+runtime returns and argmin/argmax call shapes. See THIRD_PARTY_LICENSES.md.

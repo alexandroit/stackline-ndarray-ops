@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "es2018",
+    "types": []
+  },
+  "files": ["legacy.ts", "legacy-default.ts"]
+}

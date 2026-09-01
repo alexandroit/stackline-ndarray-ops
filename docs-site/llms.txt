@@ -1,0 +1,20 @@
+# @stackline/ndarray-ops@1.0.0 on Alexandro.Net
+
+- Canonical documentation: https://alexandro.net/docs/vanilla/ndarray-ops/
+- npm: https://www.npmjs.com/package/@stackline/ndarray-ops
+- Source: https://github.com/alexandroit/stackline-ndarray-ops
+- Upstream compatibility baseline: ndarray-ops@1.2.2
+- Runtime: Node.js 18 or newer and modern browsers
+- Module formats: CommonJS, ESM, AMD, and classic browser global
+- Types: TypeScript 3.9-compatible CommonJS declarations and modern conditional ESM/CJS declarations
+- Production closure: one root node and zero dependencies
+- License: MIT
+
+Identity-preserving npm alias:
+
+ndarray-ops@npm:@stackline/ndarray-ops@1.0.0
+
+The package exposes all 150 historical operations, preserves ndarray shape,
+stride, offset, order, generic-storage, alias and block-traversal behavior for
+valid views, and uses no runtime string compilation. Invalid, non-finite or
+out-of-range view metadata is rejected synchronously.

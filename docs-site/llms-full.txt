@@ -1,0 +1,40 @@
+# @stackline/ndarray-ops@1.0.0
+
+Alexandro.Net documents `@stackline/ndarray-ops@1.0.0`, an independently
+maintained, dependency-free compatibility continuation of
+`ndarray-ops@1.2.2`.
+
+## Package identity
+
+- Documentation: https://alexandro.net/docs/vanilla/ndarray-ops/
+- npm: https://www.npmjs.com/package/@stackline/ndarray-ops
+- Source: https://github.com/alexandroit/stackline-ndarray-ops
+- License: MIT with upstream runtime and DefinitelyTyped attribution
+- Runtime: Node.js 18 or newer; modern browsers
+- Production graph: one node, zero runtime, optional, peer or bundled dependencies
+
+## Compatibility
+
+The package preserves the exact 150-key CommonJS operation inventory and adds
+native ESM named/default exports, a byte-identical AMD/classic-browser build,
+and corrected TypeScript 3.9/current declarations. Valid views retain
+rank-zero and empty behavior, arbitrary rank, shape/stride/offset/order
+semantics, negative and zero strides, mixed-order 64-cell reverse blocking,
+generic get/set side effects, short-circuit reads and shared-buffer clobber
+order. Mutating operations return the destination view.
+
+The static implementation uses no `eval` or `new Function`, so it works under
+strict Content Security Policy and Node's string-code-generation prohibition.
+Malformed metadata is intentionally hardened: non-finite or out-of-range
+shape, stride and offset fields, invalid order permutations, invalid dtype and
+invalid generic storage fail synchronously.
+
+## Migration
+
+Existing imports can remain unchanged through the exact alias:
+
+`ndarray-ops@npm:@stackline/ndarray-ops@1.0.0`
+
+Downstreams should run their own clean install, tests, types, lint, build and a
+layout-specific smoke test. The replacement is independently maintained and
+is not affiliated with or endorsed by Mikola Lysenko, scijs or DefinitelyTyped.

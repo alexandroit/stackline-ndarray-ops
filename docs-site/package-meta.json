@@ -1,0 +1,16 @@
+{
+  "moduleFormats": [
+    "CommonJS",
+    "ESM",
+    "AMD",
+    "classic browser global"
+  ],
+  "name": "@stackline/ndarray-ops",
+  "operations": 150,
+  "productionDependencies": 0,
+  "runtimeFloor": "Node.js 18",
+  "strictCsp": true,
+  "types": "TypeScript 3.9 and modern conditional declarations",
+  "upstreamBaseline": "ndarray-ops 1.2.2",
+  "version": "1.0.0"
+}

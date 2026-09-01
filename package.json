@@ -1,0 +1,191 @@
+{
+  "name": "@stackline/ndarray-ops",
+  "version": "1.0.0",
+  "description": "Dependency-free, CSP-safe elementwise and aggregate operations for ndarrays",
+  "keywords": [
+    "ndarray",
+    "array",
+    "math",
+    "scientific",
+    "csp",
+    "stackline"
+  ],
+  "license": "MIT",
+  "author": "Stackline maintainers",
+  "contributors": [
+    "Mikola Lysenko (original ndarray-ops author)",
+    "DefinitelyTyped contributors (declaration source)"
+  ],
+  "homepage": "https://alexandro.net/docs/vanilla/ndarray-ops/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/stackline-ndarray-ops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexandroit/stackline-ndarray-ops/issues"
+  },
+  "type": "commonjs",
+  "main": "./ndarray-ops.js",
+  "module": "./index.mjs",
+  "browser": "./browser.js",
+  "types": "./index.d.ts",
+  "typings": "./index.d.ts",
+  "typesVersions": {
+    "*": {
+      "ndarray-ops": ["index.d.ts"],
+      "ndarray-ops.js": ["index.d.ts"],
+      "browser": ["index.d.ts"],
+      "browser.js": ["index.d.ts"]
+    }
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./index.d.mts",
+        "require": "./index.d.cts",
+        "default": "./index.d.ts"
+      },
+      "browser": {
+        "import": "./index.mjs",
+        "require": "./browser.js",
+        "default": "./browser.js"
+      },
+      "import": "./index.mjs",
+      "require": "./ndarray-ops.js",
+      "default": "./ndarray-ops.js"
+    },
+    "./ndarray-ops": {
+      "types": {
+        "import": "./index.d.mts",
+        "require": "./index.d.cts",
+        "default": "./index.d.ts"
+      },
+      "browser": {
+        "import": "./index.mjs",
+        "require": "./browser.js",
+        "default": "./browser.js"
+      },
+      "import": "./index.mjs",
+      "require": "./ndarray-ops.js",
+      "default": "./ndarray-ops.js"
+    },
+    "./ndarray-ops.js": {
+      "types": {
+        "import": "./index.d.mts",
+        "require": "./index.d.cts",
+        "default": "./index.d.ts"
+      },
+      "browser": {
+        "import": "./index.mjs",
+        "require": "./browser.js",
+        "default": "./browser.js"
+      },
+      "import": "./index.mjs",
+      "require": "./ndarray-ops.js",
+      "default": "./ndarray-ops.js"
+    },
+    "./browser": {
+      "types": {
+        "import": "./index.d.mts",
+        "require": "./index.d.cts",
+        "default": "./index.d.ts"
+      },
+      "browser": {
+        "import": "./index.mjs",
+        "require": "./browser.js",
+        "default": "./browser.js"
+      },
+      "import": "./index.mjs",
+      "require": "./browser.js",
+      "default": "./browser.js"
+    },
+    "./browser.js": {
+      "types": {
+        "import": "./index.d.mts",
+        "require": "./index.d.cts",
+        "default": "./index.d.ts"
+      },
+      "browser": {
+        "import": "./index.mjs",
+        "require": "./browser.js",
+        "default": "./browser.js"
+      },
+      "import": "./index.mjs",
+      "require": "./browser.js",
+      "default": "./browser.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "ndarray-ops.js",
+    "browser.js",
+    "index.mjs",
+    "index.d.ts",
+    "index.d.cts",
+    "index.d.mts",
+    "index.named.d.ts",
+    "examples",
+    "licenses",
+    "CHANGELOG.md",
+    "COMPATIBILITY_CONTRACT.md",
+    "LICENSE",
+    "MIGRATION.md",
+    "NOTICE",
+    "README.md",
+    "SECURITY.md",
+    "THIRD_PARTY_LICENSES.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/build.mjs",
+    "lint": "eslint ndarray-ops.js index.mjs scripts test examples docs-site/*.js docs-site/*.mjs",
+    "docs:prepare": "node docs-site/prepare.mjs",
+    "docs:check": "node docs-site/check.mjs",
+    "test:upstream": "node --test test/upstream.test.cjs",
+    "test:differential": "node --test test/differential.test.cjs test/api-matrix.test.cjs test/alias-matrix.test.cjs",
+    "test:contract": "node --test test/contract.test.cjs test/malformed-security.test.cjs",
+    "test:fuzz": "node --test test/fuzz.test.cjs",
+    "test:stress": "node --test test/stress.test.cjs",
+    "test:performance": "node --test test/performance.test.cjs",
+    "test:csp": "node --test test/csp.test.cjs",
+    "test:browser": "node --test test/browser.test.cjs",
+    "test:esm": "node test/esm.mjs",
+    "test:types": "node node_modules/typescript-3-9/bin/tsc -p test/types/tsconfig.legacy.json && node node_modules/typescript/bin/tsc -p test/types/tsconfig.commonjs.json && node node_modules/typescript/bin/tsc -p test/types/tsconfig.modern.json",
+    "test:runtime": "node scripts/check-runtime.mjs",
+    "test": "npm run test:upstream && npm run test:differential && npm run test:contract && npm run test:fuzz && npm run test:stress && npm run test:csp && npm run test:browser && npm run test:esm && npm run test:types && npm run test:runtime && npm run test:performance",
+    "test:coverage": "c8 --all --include=ndarray-ops.js --check-coverage --lines 90 --functions 90 --branches 80 node --test test/upstream.test.cjs test/differential.test.cjs test/api-matrix.test.cjs test/alias-matrix.test.cjs test/contract.test.cjs test/malformed-security.test.cjs test/fuzz.test.cjs test/stress.test.cjs test/browser.test.cjs",
+    "test:smoke": "node scripts/smoke-install.mjs",
+    "test:closure": "node scripts/check-production-closure.mjs",
+    "check:package": "publint && attw --pack .",
+    "check:licenses": "node scripts/check-licenses.mjs",
+    "check:sbom": "node scripts/check-sbom.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "pack:check": "npm pack --dry-run",
+    "audit:dependencies": "npm audit --omit=dev --audit-level=low",
+    "audit:all": "npm audit --audit-level=low",
+    "audit:signatures": "npm audit signatures",
+    "verify": "npm run clean && npm run lint && npm run build && npm run docs:prepare && npm run docs:check && npm test && npm run test:coverage && npm run test:smoke && npm run test:closure && npm run check:package && npm run check:licenses && npm run check:sbom && npm run check:release && npm run pack:check && npm run audit:dependencies && npm run audit:all && npm run audit:signatures",
+    "artifact:prepare": "node scripts/create-artifact.mjs",
+    "prepack": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.5",
+    "@eslint/js": "10.0.1",
+    "@types/ndarray": "1.1.0",
+    "c8": "12.0.0",
+    "eslint": "10.9.1",
+    "ndarray": "1.0.19",
+    "ndarray-ops-upstream": "npm:ndarray-ops@1.2.2",
+    "publint": "0.3.24",
+    "typescript": "7.0.2",
+    "typescript-3-9": "npm:typescript@3.9.10"
+  }
+}
