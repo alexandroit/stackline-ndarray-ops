@@ -5,7 +5,7 @@
 ```json
 {
   "dependencies": {
-    "ndarray-ops": "npm:@stackline/ndarray-ops@1.0.0"
+    "ndarray-ops": "npm:@stackline/ndarray-ops@1.0.1"
   }
 }
 ```
