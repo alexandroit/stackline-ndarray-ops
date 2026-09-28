@@ -1,6 +1,6 @@
 {
   "name": "@stackline/ndarray-ops",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dependency-free, CSP-safe elementwise and aggregate operations for ndarrays",
   "keywords": [
     "ndarray",
@@ -8,7 +8,9 @@
     "math",
     "scientific",
     "csp",
-    "stackline"
+    "stackline",
+    "numerical-computing",
+    "array-operations"
   ],
   "license": "MIT",
   "author": "Stackline maintainers",
@@ -32,10 +34,18 @@
   "typings": "./index.d.ts",
   "typesVersions": {
     "*": {
-      "ndarray-ops": ["index.d.ts"],
-      "ndarray-ops.js": ["index.d.ts"],
-      "browser": ["index.d.ts"],
-      "browser.js": ["index.d.ts"]
+      "ndarray-ops": [
+        "index.d.ts"
+      ],
+      "ndarray-ops.js": [
+        "index.d.ts"
+      ],
+      "browser": [
+        "index.d.ts"
+      ],
+      "browser.js": [
+        "index.d.ts"
+      ]
     }
   },
   "sideEffects": false,

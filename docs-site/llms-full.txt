@@ -1,6 +1,6 @@
-# @stackline/ndarray-ops@1.0.0
+# @stackline/ndarray-ops@1.0.1
 
-Alexandro.Net documents `@stackline/ndarray-ops@1.0.0`, an independently
+Alexandro.Net documents `@stackline/ndarray-ops@1.0.1`, an independently
 maintained, dependency-free compatibility continuation of
 `ndarray-ops@1.2.2`.
 
@@ -33,7 +33,7 @@ invalid generic storage fail synchronously.
 
 Existing imports can remain unchanged through the exact alias:
 
-`ndarray-ops@npm:@stackline/ndarray-ops@1.0.0`
+`ndarray-ops@npm:@stackline/ndarray-ops@1.0.1`
 
 Downstreams should run their own clean install, tests, types, lint, build and a
 layout-specific smoke test. The replacement is independently maintained and

@@ -55,12 +55,12 @@ const metadata = JSON.parse(site['package-meta.json'])
 const packageJson = JSON.parse(read(projectDir, 'package.json'))
 
 assert.equal(metadata.name, packageName)
-assert.equal(metadata.version, '1.0.0')
+assert.equal(metadata.version, '1.0.1')
 assert.equal(metadata.operations, 150)
 assert.equal(metadata.productionDependencies, 0)
 assert.equal(metadata.strictCsp, true)
 assert.equal(packageJson.name, packageName)
-assert.equal(packageJson.version, '1.0.0')
+assert.equal(packageJson.version, '1.0.1')
 assert.equal(packageJson.homepage, canonical)
 assert.deepEqual(packageJson.dependencies, {})
 
@@ -72,8 +72,8 @@ includesAll(html, [
   'href="#content"',
   '<main id="content" tabindex="-1">',
   '<h1 id="page-title">@stackline/<span>ndarray-ops</span></h1>',
-  'npm install @stackline/ndarray-ops@1.0.0',
-  'ndarray-ops": "npm:@stackline/ndarray-ops@1.0.0"',
+  'npm install @stackline/ndarray-ops@1.0.1',
+  'ndarray-ops": "npm:@stackline/ndarray-ops@1.0.1"',
   'Node.js ≥18',
   'CJS · ESM · browser',
   '150 operations',
@@ -92,7 +92,7 @@ assert(jsonLdMatch, 'package page is missing JSON-LD')
 const jsonLd = JSON.parse(jsonLdMatch[1])
 assert.equal(jsonLd['@type'], 'SoftwareSourceCode')
 assert.equal(jsonLd.name, packageName)
-assert.equal(jsonLd.version, '1.0.0')
+assert.equal(jsonLd.version, '1.0.1')
 assert.equal(jsonLd.url, canonical)
 assert.equal(jsonLd.runtimePlatform, 'Node.js >=18; modern browsers')
 
@@ -121,9 +121,9 @@ for (const location of locations) {
 
 for (const value of [site['llms.txt'], site['llms-full.txt']]) {
   includesAll(value, [
-    '@stackline/ndarray-ops@1.0.0',
+    '@stackline/ndarray-ops@1.0.1',
     'ndarray-ops@1.2.2',
-    'ndarray-ops@npm:@stackline/ndarray-ops@1.0.0',
+    'ndarray-ops@npm:@stackline/ndarray-ops@1.0.1',
     'Node.js 18',
     canonical,
     '150',

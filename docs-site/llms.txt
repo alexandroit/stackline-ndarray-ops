@@ -1,4 +1,4 @@
-# @stackline/ndarray-ops@1.0.0 on Alexandro.Net
+# @stackline/ndarray-ops@1.0.1 on Alexandro.Net
 
 - Canonical documentation: https://alexandro.net/docs/vanilla/ndarray-ops/
 - npm: https://www.npmjs.com/package/@stackline/ndarray-ops
@@ -12,7 +12,7 @@
 
 Identity-preserving npm alias:
 
-ndarray-ops@npm:@stackline/ndarray-ops@1.0.0
+ndarray-ops@npm:@stackline/ndarray-ops@1.0.1
 
 The package exposes all 150 historical operations, preserves ndarray shape,
 stride, offset, order, generic-storage, alias and block-traversal behavior for

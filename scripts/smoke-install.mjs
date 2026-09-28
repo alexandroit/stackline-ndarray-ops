@@ -92,7 +92,7 @@ try {
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve))
   const alias = path.join(temporary, 'alias')
   await mkdir(alias)
-  await writeFile(path.join(alias, 'package.json'), `${JSON.stringify({ private: true, dependencies: { 'ndarray-ops': 'npm:@stackline/ndarray-ops@1.0.0' } }, null, 2)}\n`)
+  await writeFile(path.join(alias, 'package.json'), `${JSON.stringify({ private: true, dependencies: { 'ndarray-ops': 'npm:@stackline/ndarray-ops@1.0.1' } }, null, 2)}\n`)
   const registry = `http://127.0.0.1:${server.address().port}`
   const aliasInstall = await run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund', '--registry', registry], alias)
   assert.equal(aliasInstall.status, 0, aliasInstall.stdout + aliasInstall.stderr)
