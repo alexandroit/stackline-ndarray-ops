@@ -1,0 +1,30 @@
+{
+  "repository": "alexandroit/stackline-ndarray-ops",
+  "packages": [
+    {
+      "name": "@stackline/ndarray-ops",
+      "path": "README.md",
+      "version": "1.0.2",
+      "baselineVersion": "1.0.1",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "ndarray-ops",
+        "typescript",
+        "nodejs",
+        "ndarray",
+        "array",
+        "math",
+        "scientific",
+        "csp",
+        "numerical-computing",
+        "array-operations"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/ndarray-ops/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/ndarray-ops/-/ndarray-ops-1.0.1.tgz",
+      "baselineIntegrity": "sha512-ipXiD5CUtVbaM5aUqBYN/jRE7DI1BIoTbWgP0HORpyMtZgalnrbdLRVCrD8moVozK80j/Eeu9CqExr8/EQlhrg==",
+      "expectedSha512": "f27746b6ebcb4d26d61fe9720a63d70879208af33873fd76900c439539730b75988cb757662c8c4906b460bc5bc1c00d13020a4ea210979f9a875c0e17e6c078",
+      "tag": "docs-stackline-ndarray-ops-v1.0.2"
+    }
+  ]
+}
