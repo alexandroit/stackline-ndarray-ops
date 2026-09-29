@@ -4,7 +4,7 @@
     {
       "name": "@stackline/ndarray-ops",
       "path": "README.md",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "baselineVersion": "1.0.1",
       "keywords": [
         "stackline",
@@ -23,8 +23,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/ndarray-ops/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/ndarray-ops/-/ndarray-ops-1.0.1.tgz",
       "baselineIntegrity": "sha512-ipXiD5CUtVbaM5aUqBYN/jRE7DI1BIoTbWgP0HORpyMtZgalnrbdLRVCrD8moVozK80j/Eeu9CqExr8/EQlhrg==",
-      "expectedSha512": "f27746b6ebcb4d26d61fe9720a63d70879208af33873fd76900c439539730b75988cb757662c8c4906b460bc5bc1c00d13020a4ea210979f9a875c0e17e6c078",
-      "tag": "docs-stackline-ndarray-ops-v1.0.2"
+      "expectedSha512": "261bfeeaa5a65ef6c63f378ee039d3cb9e63d44d547d50c57c175d5c1f5f2137e27eb3939c06e83f102efbd81f7dcdd360cb70b38d64e7022ab5973000903e0e",
+      "tag": "docs-stackline-ndarray-ops-v1.0.3"
     }
   ]
 }
