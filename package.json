@@ -1,6 +1,6 @@
 {
   "name": "@stackline/ndarray-ops",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dependency-free, CSP-safe elementwise and aggregate operations for ndarrays",
   "keywords": [
     "stackline",
