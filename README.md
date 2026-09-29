@@ -1,17 +1,18 @@
 # @stackline/ndarray-ops
 
-> Dependency-free, CSP-safe elementwise and aggregate operations for ndarrays
+> Dependency-free, CSP-safe elementwise and aggregate operations for ndarrays.
 
 [![npm version](https://img.shields.io/npm/v/@stackline/ndarray-ops.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/ndarray-ops)
-[![license](https://img.shields.io/npm/l/@stackline/ndarray-ops.svg?style=flat-square)](https://github.com/alexandroit/stackline-ndarray-ops/blob/main/LICENSE)
-[![GitHub repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-ndarray-ops)
+[![license](https://img.shields.io/npm/l/@stackline/ndarray-ops.svg?style=flat-square)](https://github.com/alexandroit/stackline-ndarray-ops)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-ndarray-ops-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-ndarray-ops)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/ndarray-ops/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
-**[Documentation](https://alexandro.net/docs/vanilla/ndarray-ops/)** |
-**[npm](https://www.npmjs.com/package/@stackline/ndarray-ops)** |
-**[Issues](https://github.com/alexandroit/stackline-ndarray-ops/issues)** |
-**[Repository](https://github.com/alexandroit/stackline-ndarray-ops)**
+**[Documentation](https://alexandro.net/docs/vanilla/ndarray-ops/)** | **[npm](https://www.npmjs.com/package/@stackline/ndarray-ops)** | **[Issues](https://github.com/alexandroit/stackline-ndarray-ops/issues)** | **[Repository](https://github.com/alexandroit/stackline-ndarray-ops)**
 
-**Package version:** `1.0.1`
+**Current package version:** `1.0.2`
+
+---
 
 ## Why this package?
 
@@ -27,7 +28,7 @@ endorsed by the original project.
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/ndarray-ops@1.0.1` |
+| Package | `@stackline/ndarray-ops@1.0.2` |
 | Node.js runtime | `>=18.0.0` |
 | CommonJS / primary entry | `./ndarray-ops.js` |
 | ES module entry | `./index.mjs` |
@@ -145,16 +146,28 @@ npm run test:smoke
 
 Run `npm run verify` and inspect the package contents before release. Publish a new version through the [GitHub Actions publishing workflow](https://github.com/alexandroit/stackline-ndarray-ops/actions/workflows/publish.yml), using the SHA-512 digest of the reviewed tarball. Verify the exact published version, tarball integrity, and npm provenance after the run.
 
-## Community and Support
-
-Report reproducible package issues in the [issue tracker](https://github.com/alexandroit/stackline-ndarray-ops/issues). Use the [security policy](https://github.com/alexandroit/stackline-ndarray-ops/blob/main/SECURITY.md) for vulnerability reports.
-
-- [Stackline / Alexandro.Net](https://alexandro.net/)
-- [GitHub](https://github.com/alexandroit)
-- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
-- [Reddit community: r/Stackline](https://www.reddit.com/r/Stackline/)
-
 ## License
 
 MIT. Original runtime and DefinitelyTyped attribution is preserved in
 `LICENSE`, `NOTICE`, and `THIRD_PARTY_LICENSES.md`.
+
+## Credits and original authors
+
+- Stackline maintainers.
+- Mikola Lysenko.
+- DefinitelyTyped contributors.
+- Copyright (c) 2013 Mikola Lysenko.
+- Copyright (c) 2026 Stackline maintainers.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
