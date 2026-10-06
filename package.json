@@ -198,7 +198,7 @@
     "eslint": "10.9.1",
     "ndarray": "1.0.19",
     "ndarray-ops-upstream": "npm:ndarray-ops@1.2.2",
-    "publint": "0.3.24",
+    "publint": "0.3.25",
     "typescript": "7.0.2",
     "typescript-3-9": "npm:typescript@3.9.10"
   }
