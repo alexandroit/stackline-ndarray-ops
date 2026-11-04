@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict'
-import { chmod, copyFile, lstat, mkdtemp, readdir, rename, rm } from 'node:fs/promises'
+import { chmod, copyFile, lstat, mkdtemp, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const sourceSiteDir = path.dirname(fileURLToPath(import.meta.url))
 const projectDir = path.resolve(sourceSiteDir, '..')
+const packageVersion = JSON.parse(await readFile(path.join(projectDir, 'package.json'), 'utf8')).version
 const destination = path.join(sourceSiteDir, 'dist')
 const siteFiles = [
   'index.html',
@@ -42,6 +43,10 @@ try {
   await chmod(staging, 0o755)
   for (const siteFile of siteFiles) {
     await copyRegularFile(path.join(sourceSiteDir, siteFile), path.join(staging, siteFile))
+    if (['index.html', 'llms.txt', 'llms-full.txt', 'package-meta.json'].includes(siteFile)) {
+      const target = path.join(staging, siteFile)
+      await writeFile(target, (await readFile(target, 'utf8')).replaceAll('{{PACKAGE_VERSION}}', packageVersion))
+    }
   }
   for (const rootFile of rootFiles) {
     await copyRegularFile(path.join(projectDir, rootFile), path.join(staging, rootFile))

@@ -28,7 +28,7 @@ endorsed by the original project.
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/ndarray-ops@1.0.3` |
+| Package | `@stackline/ndarray-ops@1.0.4` |
 | Node.js runtime | `>=18.0.0` |
 | CommonJS / primary entry | `./ndarray-ops.js` |
 | ES module entry | `./index.mjs` |

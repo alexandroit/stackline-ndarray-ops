@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4 - 2026-11-04
+
+- Update development dependency overrides for current security fixes.
+- Use patched Node.js tooling and validate release metadata against the package manifest.
+
 ## [1.0.1] - 2026-09-28
 
 - Organize package documentation, preserve API and migration examples, and add Stackline community links.
