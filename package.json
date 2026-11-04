@@ -196,7 +196,7 @@
     "@types/ndarray": "1.1.0",
     "c8": "12.0.0",
     "eslint": "10.9.1",
-    "ndarray": "1.0.19",
+    "ndarray": "1.1.1",
     "ndarray-ops-upstream": "npm:ndarray-ops@1.2.2",
     "publint": "0.3.24",
     "typescript": "7.0.2",
