@@ -10,7 +10,7 @@
 
 **[Documentation](https://alexandro.net/docs/vanilla/ndarray-ops/)** | **[npm](https://www.npmjs.com/package/@stackline/ndarray-ops)** | **[Issues](https://github.com/alexandroit/stackline-ndarray-ops/issues)** | **[Repository](https://github.com/alexandroit/stackline-ndarray-ops)**
 
-**Current package version:** `1.0.3`
+**Current package version:** `1.0.5`
 
 ---
 
@@ -28,7 +28,7 @@ endorsed by the original project.
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/ndarray-ops@1.0.4` |
+| Package | `@stackline/ndarray-ops@1.0.5` |
 | Node.js runtime | `>=18.0.0` |
 | CommonJS / primary entry | `./ndarray-ops.js` |
 | ES module entry | `./index.mjs` |
